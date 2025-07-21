@@ -1,0 +1,45 @@
+.hero-section-container {
+  font-family: "inter";
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  gap: 50px;
+}
+
+.hero-left {
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 90px;
+  font-weight: 900;
+  line-height: 90px;
+  text-align: left;
+
+  color: #00674f;
+}
+
+.hero-para {
+  margin: 50px 0 0 0;
+  text-align: left;
+  font-size: 23px;
+}
+
+.hero-image {
+  border-radius: 50%;
+  background-color: #0f766e;
+  width: 40vw;
+  height: 40vw;
+
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image > img {
+  /* width: 100px; */
+  /* height: 100px; */
+}
