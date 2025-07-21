@@ -1,6 +1,53 @@
+.section-container {
+	margin: 100px 0 0 0;
+	position: relative;
+	/* position: absolute;
+	width: 80vw; */
+}
 
+.background-image-1 {
+	z-index: -1;
+	right: -120px;
+	top: -470px;
+	position: absolute;
+}
 
+.section-title {
+	font-family: "inter";
+	font-size: 70px;
+	font-weight: 600;
+	line-height: 90px;
 
+	text-align: left;
+	color: #00674f;
+}
 
+.skillsets {
+	margin: 70px 0 70px 0;
+	position: relative;
+	/* height: 80vh; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+.skill-image {
+	position: relative;
+}
 
+.skillset {
+	position: absolute;
+}
+
+.skill-1 {
+	font-size: 25px;
+	font-weight: 500;
+	color: #00674f;
+}
+
+.skills {
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 1.5px;
+	top: 35px;
+}
