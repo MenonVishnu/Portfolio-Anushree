@@ -1,40 +1,19 @@
 import "./Project.css";
 import ProjectCard from "./ProjectCard";
 import Bg4 from "../../assets/backgroundImage4.png";
-
-const ProjectData = [
-	{
-		projectTitle: "Team Performance Tracking Portal",
-		projectTools: "Power Bi | SQL Database",
-		projectDescription: `Designed and developed a performance KPI dashboard using Power BI to
-    analyze employee metrics for HR and operations teams.`,
-	},
-	{
-		projectTitle: "Team Performance Tracking Portal",
-		projectTools: "Power Bi | SQL Database",
-		projectDescription: `Designed and developed a performance KPI dashboard using Power BI to
-    analyze employee metrics for HR and operations teams.`,
-	},
-	{
-		projectTitle: "Team Performance Tracking Portal",
-		projectTools: "Power Bi | SQL Database",
-		projectDescription: `Designed and developed a performance KPI dashboard using Power BI to
-    analyze employee metrics for HR and operations teams.`,
-	},
-];
+import { projectsData } from "../../data/portfolioData";
 
 const Project = () => {
 	return (
-		<div className="section-container">
+		<div className="section-container" id="projects">
 			<img className="background-image-4" src={Bg4} alt="" />
 			<div className="section-title">
 				My
-				<br /> Project
+				<br /> Projects
 			</div>
 			<div className="project-container">
-				{/* <ProjectCard data={ProjectData[0]} /> */}
-				{ProjectData.map((project) => (
-					<ProjectCard data={project} />
+				{projectsData.map((project, index) => (
+					<ProjectCard key={index} data={project} />
 				))}
 			</div>
 		</div>

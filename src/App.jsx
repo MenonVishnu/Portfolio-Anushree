@@ -14,15 +14,14 @@ import Navbar from "./components/Navbar/Navbar";
 
 function App() {
 	return (
-		<>
-			{/* <div className="main-container">Hello! Portfolio Anushree</div> */}
+		<div className="portfolio-app">
 			<Navbar />
 			<HeroSection />
 			<MySkill />
 			<DataWork />
 			<Project />
 			<ThankYou />
-		</>
+		</div>
 	);
 }
 

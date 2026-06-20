@@ -1,106 +1,46 @@
-import "./MySkill.css";
+import "./Myskill.css";
 import Cube from "../../assets/cube.png";
 import Bg1 from "../../assets/backgroundImage1.png";
+import { skillsData } from "../../data/portfolioData";
 
 const MySkill = () => {
+	const getSkill = (id) => skillsData.find((s) => s.id === id) || { header: "", body: "" };
+
 	return (
-		<div className="section-container">
+		<div className="section-container" id="skills">
 			<img className="background-image-1" src={Bg1} alt="" />
 			<div className="section-title">
 				My <br />
 				Skills
 			</div>
 			<div className="skillsets">
+				<div className="skillset skillset-spreadsheet">
+					<div className="skill-body">{getSkill("spreadsheet").body}</div>
+					<div className="skill-header">{getSkill("spreadsheet").header}</div>
+				</div>
+				
+				<div className="skillset skillset-qa">
+					<div className="skill-header">{getSkill("qa").header}</div>
+					<div className="skill-body">{getSkill("qa").body}</div>
+				</div>
+				
+				<div className="skillset skillset-database">
+					<div className="skill-header">{getSkill("database").header}</div>
+					<div className="skill-body">{getSkill("database").body}</div>
+				</div>
+
 				<div className="skill-image">
-					<img src={Cube} alt="" />
+					<img src={Cube} className="floating-cube" alt="Rubik's Cube" />
 				</div>
-				<div
-					className="skillset"
-					style={{
-						top: "-30px",
-					}}>
-					<div
-						className="skills"
-						style={{
-							position: "absolute",
-							top: "-20px",
-							right: "-130px",
-						}}>
-						Excel | Google Sheets
-					</div>
-					<div className="skill-1">Spreadsheet</div>
+				
+				<div className="skillset skillset-languages">
+					<div className="skill-header">{getSkill("languages").header}</div>
+					<div className="skill-body">{getSkill("languages").body}</div>
 				</div>
-				<div
-					className="skillset"
-					style={{
-						top: "70px",
-						right: "340px",
-					}}>
-					<div className="skill-1">QA & Dev Tools</div>
-
-					<div
-						className="skills"
-						style={{
-							position: "absolute",
-							right: "-180px",
-							width: "20vw",
-						}}>
-						Azure DevOps | Microsoft Office Suite | Browser DevTools
-					</div>
-				</div>
-				<div
-					className="skillset"
-					style={{
-						bottom: "60px",
-						right: "460px",
-					}}>
-					<div className="skill-1">Database</div>
-
-					<div
-						className="skills"
-						style={{
-							position: "absolute",
-							right: "-190px",
-							width: "20vw",
-						}}>
-						MySQL | NoSQL | Kaggle
-					</div>
-				</div>
-				<div
-					className="skillset"
-					style={{
-						bottom: "25px",
-						right: "680px",
-					}}>
-					<div className="skill-1">Languages</div>
-
-					<div
-						className="skills"
-						style={{
-							position: "absolute",
-							right: "-70px",
-							width: "20vw",
-						}}>
-						Python | Pandas | NumPy | SQL
-					</div>
-				</div>
-				<div
-					className="skillset"
-					style={{
-						bottom: "240px",
-						right: "730px",
-					}}>
-					<div className="skill-1">Visualization</div>
-
-					<div
-						className="skills"
-						style={{
-							position: "absolute",						
-							right: "42px",
-							width: "20vw",
-						}}>
-						Tableau | Power Bi | Matplotlib | Seaborn
-					</div>
+				
+				<div className="skillset skillset-visualization">
+					<div className="skill-header">{getSkill("visualization").header}</div>
+					<div className="skill-body">{getSkill("visualization").body}</div>
 				</div>
 			</div>
 		</div>

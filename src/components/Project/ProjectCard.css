@@ -2,6 +2,12 @@
 	position: relative;
 	width: 380px;
 	height: 500px;
+	transition: var(--transition-slow);
+}
+
+.project-card:hover {
+	transform: translateY(-8px);
+	filter: drop-shadow(0 20px 30px rgba(115, 193, 255, 0.15));
 }
 
 .top-right {
@@ -9,60 +15,81 @@
 	position: absolute;
 	height: 142px;
 	width: 124px;
-	background-color: #00674f10;
+	background-color: #73c1ff15;
+	/* border: 1.5px solid #73c1ff; */
 	border-radius: 20px;
 	right: 0px;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: var(--transition);
+}
+
+.project-card:hover .top-right {
+	background-color: #73c1ff25;
+	border-color: #00b8d4;
+}
+
+.top-right img:not(.arrow) {
+	width: 44px;
+	height: 44px;
+	object-fit: contain;
 }
 
 .arrow {
 	position: absolute;
-	top: 25px;
-	right: 10px;
+	top: 38px;
+	right: 28px;
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+	transition: var(--transition);
+}
+
+.project-card:hover .arrow {
+	transform: translate(3px, -3px) scale(1.1);
 }
 
 .project-title {
-	padding: 20px 20px 0 20px;
-	font-size: 25px;
-	font-weight: 500;
-	letter-spacing: 1px;
-
-	color: #00674f;
-
-	width: 205px;
-	height: 116px;
-
+	padding: 10px 20px 0 20px;
+	font-size: 22px;
+	font-weight: 600;
+	letter-spacing: -0.5px;
+	line-height: 1.5;
+	color: #73c1ff;
+	width: 220px;
+	height: 120px;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	text-align: left;
+	transition: var(--transition);
 }
 
 .project-tools {
 	margin: 0 0 0 20px;
-	padding: 0 15px 0 15px;
-	width: 153px;
-
+	padding: 4px 12px;
+	width: fit-content;
 	font-size: 10px;
 	font-weight: 400;
 	line-height: 20px;
 	text-align: left;
-	letter-spacing: 1px;
-
-	background-color: #00674f10;
-	border-radius: 7px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	color: #000000;
+	background-color: rgba(115, 193, 255, 0.18);
+	border: none;
+	border-radius: 8px;
+	transition: var(--transition);
 }
 
 .project-description {
-	padding: 20px;
-
-	font-size: 20px;
-	letter-spacing: 1px;
-	line-height: 32px;
+	padding: 24px 20px;
+	font-size: 16px;
+	font-weight: 500;
+	letter-spacing: 0px;
+	line-height: 1.6;
 	text-align: left;
-
-	width: 350px;
+	color: #000000;
+	width: 340px;
 }
